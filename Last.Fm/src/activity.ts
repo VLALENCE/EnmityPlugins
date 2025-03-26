@@ -79,7 +79,8 @@ export function getActivity(): Activity | undefined {
           const image = track.image[3]["#text"];
           activity.details = `${name}`;
           activity.state = `by ${artist}`;
-
+          activity.name = `${artist} - ${name}`;
+          
           if (image) {
             activity.assets = {
               large_image: track.image[3]["#text"],
